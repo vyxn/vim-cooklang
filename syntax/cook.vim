@@ -30,7 +30,7 @@ syntax match cookTimer "\~[^{]\{-}{[^}]*}"
 " Comments
 syntax keyword cookTodo contained TODO FIXME NOTE
 syntax match cookComment "--.*$" contains=cookTodo
-syntax match cookBlockComment "\[[^\]]*\]" contains=cookTodo
+syntax region cookBlockComment start="\[-" end="-\]" contains=cookTodo
 
 highlight def link cookUnit Label
 highlight def link cookNumbers Number
